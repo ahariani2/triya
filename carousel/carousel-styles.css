@@ -41,7 +41,6 @@
 }
 
 .carousel-card {
-  position: relative;
   width: 80%;
   flex-shrink: 0;
   box-sizing: border-box;
