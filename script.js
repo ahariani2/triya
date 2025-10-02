@@ -41,6 +41,11 @@ const listingsData = [
   }
 ];
 
+initializeApp(listingsData);
+
+
+function initializeApp(listingsData) {
+
 
 listingsData.forEach(listing => {
   if (listing.title && listing.title.includes('|')) {
@@ -336,5 +341,5 @@ if (initialFilter) {
   filterListings(initialFilter);
 } 
 
-
+}
      
