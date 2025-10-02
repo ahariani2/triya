@@ -1,19 +1,45 @@
-const dataUrl = 'https://gist.githubusercontent.com/ahariani2/42185f9c9fb55596e7c605a0ddb62c63/raw/1e4cec68f5241519028eedf882d98be42b149ac3/listings.json';
-
-// Fetch the data from the source
-fetch(dataUrl)
-  .then(response => response.json())
-  .then(listingsData => {
-    // SUCCESS! The data has arrived.
-    // Now, and only now, we run the function that needs the data.
-    initializeApp(listingsData);
-  })
-  .catch(error => {
-    console.error('Something went wrong!', error);
-  });
-
-// This new function now holds ALL the code that depends on the data.
-function initializeApp(listingsData) {
+const listingsData = [
+  {
+    "listingId": 1251152485,
+    "title": "Custom Logo Design Confetti | Personalized Small Business Packing Materials, Custom Design Confetti, Business Logo Favors, Bulk Packaging",
+    "subtitle": "This adorable confetti will brighten up any local event, party, product packaging, etc.",
+    "etsyLink": "https://triyadesigns.etsy.com/listing/1251152485",
+    "imageUrl": "https://i.etsystatic.com/8681361/r/il/ae6141/3990757239/il_fullxfull.3990757239_l9tp.jpg",
+    "amazonLink": null,
+    "tags": [
+      "Confetti",
+      "All"
+    ],
+    "badge": "Best Seller",
+    "michaelsLink": null,
+    "l4Sales": "$127",
+    "l52Sales": "$6,201",
+    "allTimeSales": "$10,870",
+    "bestSellerBadge": "Best Seller",
+    "newBadge": null,
+    "trendingBadge": "Trending"
+  },
+  {
+    "listingId": 1049257734,
+    "title": "Custom Name Confetti | Personalized Text Party Decorations, Party Favors, Hand Lettered Cursive Text, Birthday Decor",
+    "subtitle": "Brighten up any celebration with personalized word confetti!",
+    "etsyLink": "https://triyadesigns.etsy.com/listing/1049257734",
+    "imageUrl": "https://i.etsystatic.com/8681361/r/il/07f8bd/3684749400/il_794xN.3684749400_lch0.jpg",
+    "amazonLink": null,
+    "tags": [
+      "Confetti",
+      "All"
+    ],
+    "badge": "Best Seller",
+    "michaelsLink": null,
+    "l4Sales": "$242",
+    "l52Sales": "$4,505",
+    "allTimeSales": "$14,697",
+    "bestSellerBadge": "Best Seller",
+    "newBadge": null,
+    "trendingBadge": "Trending"
+  }
+];
 
 
 listingsData.forEach(listing => {
@@ -309,6 +335,6 @@ const initialFilter = getQueryParam('filter');
 if (initialFilter) {
   filterListings(initialFilter);
 } 
-}
+
 
      
