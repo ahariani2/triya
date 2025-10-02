@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 /* --- Main Container --- */
 .card-list-container {
   overflow-x: scroll;
@@ -58,6 +60,10 @@
   margin: 0;
   font-size: 0.9em;
   color: #666;
+}
+
+.card-list__title, .card-list__subtitle {
+  font-family: 'Lexend', sans-serif;
 }
 
 /* --- Mobile View --- */
