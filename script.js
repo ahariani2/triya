@@ -1,4 +1,4 @@
-const dataUrl = 'https://gist.githubusercontent.com/ahariani2/42185f9c9fb55596e7c605a0ddb62c63/raw/dfd3f45b539b9f1c9e39fa10c84b4744ea7b9ef0/listings.json';
+const dataUrl = 'https://gist.githubusercontent.com/ahariani2/42185f9c9fb55596e7c605a0ddb62c63/raw/1e4cec68f5241519028eedf882d98be42b149ac3/listings.json';
 
 // Fetch the data from the source
 fetch(dataUrl)
