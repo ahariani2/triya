@@ -22,8 +22,8 @@
 
 /* --- Individual Card Item --- */
 .card-list__item {
-  /* Desktop: 4 cards visible. 16px gap * 3 = 48px. 100% - 48px / 4 */
-  flex: 0 0 calc(25% - 12px);
+  /* Desktop: 3.3 cards visible. 16px gap * 3 = 48px. 100% - 48px / 4 */
+  flex: 0 0 calc(30% - 12px);
   background: #f9f9f9;
   border-radius: 12px; /* Rounded rectangle card */
   overflow: hidden; /* Clips the image corners */
