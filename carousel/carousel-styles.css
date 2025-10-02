@@ -19,7 +19,7 @@
 
 .carousel-card {
   position: relative;
-  width: 100%;
+  width: 80%;
   flex-shrink: 0;
   padding: 20px;
   box-sizing: border-box;
