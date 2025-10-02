@@ -10,7 +10,6 @@ fetch(dataUrl)
     console.error('Something went wrong!', error);
   });
 
-initializeApp(listingsData);
 
 
 function initializeApp(listingsData) {
