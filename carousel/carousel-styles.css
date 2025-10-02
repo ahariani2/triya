@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+.carousel-card h3, .carousel-card p {
+  font-family: 'Lexend', sans-serif;
+}
+
 .carousel-container {
   position: relative;
   width: 100%;
