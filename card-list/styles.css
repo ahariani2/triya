@@ -1,0 +1,69 @@
+/* --- Main Container --- */
+.card-list-container {
+  overflow-x: scroll;
+  /* Hides the ugly scrollbar */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For IE and Edge */
+}
+.card-list-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* --- The List of Cards --- */
+.card-list {
+  display: flex;
+  padding: 20px 0;
+  margin: 0;
+  list-style: none;
+  gap: 16px; /* Space between cards */
+}
+
+/* --- Individual Card Item --- */
+.card-list__item {
+  /* Desktop: 4 cards visible. 16px gap * 3 = 48px. 100% - 48px / 4 */
+  flex: 0 0 calc(25% - 12px);
+  background: #f9f9f9;
+  border-radius: 12px; /* Rounded rectangle card */
+  overflow: hidden; /* Clips the image corners */
+  transition: transform 0.2s ease-in-out;
+}
+.card-list__item:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Card Link & Image --- */
+.card-list__link {
+  text-decoration: none;
+  color: inherit;
+}
+.card-list__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Makes the image a perfect square */
+  object-fit: cover;
+  border-radius: 8px 8px 0 0; /* Rounded top corners for the image */
+}
+
+/* --- Card Content --- */
+.card-list__content {
+  padding: 16px;
+  text-align: center;
+}
+.card-list__title {
+  margin: 0 0 4px 0;
+  font-size: 1.1em;
+}
+.card-list__subtitle {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* --- Mobile View --- */
+@media (max-width: 768px) {
+  .card-list__item {
+    /* Mobile: 1.5 cards visible */
+    flex: 0 0 70%;
+  }
+}
