@@ -134,9 +134,9 @@ uniqueTags.forEach(tag => {
   }
 
   chip.addEventListener('click', () => {
-    gtag('event', 'filter_click', { // Track filter click
-      'filter_tag': tag
-    });
+ //   gtag('event', 'filter_click', { // Track filter click
+   //   'filter_tag': tag
+ //   });
     
     filterChips.forEach(c => c.classList.remove('active'));
     chip.classList.add('active');
@@ -232,7 +232,7 @@ const createStoreButton = (href, logoSrc, altText, className) => {
     button.classList.add('store-button', className);
     button.target = '_blank';
   
-   button.onclick = () => { // Track click
+/**   button.onclick = () => { // Track click
  gtag('event', 'product_click', {
  'item_id': listing.listingId,
  'item_name': listing.title,
@@ -242,7 +242,7 @@ const createStoreButton = (href, logoSrc, altText, className) => {
  'destination_url': href, // URL clicked
  'store': altText // E.g., 'Etsy', 'Amazon'
  });
- };
+ }; */
 
     const logo = document.createElement('img');
     logo.src = logoSrc;
@@ -273,13 +273,13 @@ const createStoreButton = (href, logoSrc, altText, className) => {
           
           
            // Track impression
- gtag('event', 'product_impression', { 
+/** gtag('event', 'product_impression', { 
  'item_id': listing.listingId,
  'item_name': listing.title,
  'item_category': listing.tags.join(', '), // Join tags into a string
  'item_list_name': itemListName,
  'item_list_id': itemListId,
- });
+ }); */
           
           // On Click
           
