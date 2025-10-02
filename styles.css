@@ -1,5 +1,5 @@
-#listings-container h3, #listings-container p {
-  font-family: 'Lora', serif;
+#listings-container, #filter-bar {
+  font-family: 'Lora', sans-serif;
 }
 
 #listings-list {
