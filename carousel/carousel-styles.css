@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
-.carousel-card h3, .carousel-card p, .carousel-card a {
+.carousel-card h3, .carousel-card p,  .carousel-card a {
   font-family: 'Lexend', sans-serif;
+}
+
+.carousel-card h3 {
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+.carousel-card p {
+  margin: 10px;
 }
 
 .carousel-container {
@@ -23,22 +32,24 @@
   transition: transform 250ms ease-in;
 }
 
-.carousel-card {
-  position: relative;
-  width: 80%;
-  flex-shrink: 0;
-  padding: 20px;
-  box-sizing: border-box;
-  background: #f1f1f1;
-  border-radius: 10px;
-  margin: 0 10px; /* Creates space between cards */
-  text-align: center;
-}
-
 .carousel-card img {
   max-width: 100%;
   height: auto;
   margin-bottom: 15px; /* Adds space between the image and the title */
+  border-radius: 10px;
+
+}
+
+.carousel-card {
+  position: relative;
+  width: 80%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  background: #d19b75;
+  border-radius: 10px;
+  margin: 0 10px; /* Creates space between cards */
+  text-align: center;
+  padding-bottom: 15px
 }
 
 .carousel-button {
