@@ -1,4 +1,4 @@
-const dataUrl = 'https://gist.githubusercontent.com/ahariani2/42185f9c9fb55596e7c605a0ddb62c63/raw/547c09b4e7746448ad12f15feb94875e4691a275/listings.json';
+/** const dataUrl = 'https://gist.githubusercontent.com/ahariani2/42185f9c9fb55596e7c605a0ddb62c63/raw/547c09b4e7746448ad12f15feb94875e4691a275/listings.json';
 
 // Fetch the data from the source
 fetch(dataUrl)
@@ -10,6 +10,38 @@ fetch(dataUrl)
     console.error('Something went wrong!', error);
   });
 
+  */
+
+
+// Paste the Web app URL you copied from Google Apps Script
+const dataUrl = 'https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhmrAUoqN5WtzIQs__HJal-zuFhX5xIfOjhzheJCbFcLeDSEYbfWk0jo2DTG-IhCPCKsO4yGvxVh1v9Qg8KhKDOHgVfzSDTqesOpjHfzGX7PHjRdbPciuuRnc12WTYELK8rYzDp1e5_RD0gRVSigaWLxjU2gsFB7SzzEh0v2EAw0o9awXgl7Jm1nTS5ZjI6ia7k4_Ll48UodE18G_DQgegHqOK1fmBYtMu_4TeF9Bh6e1LOdF0yDbOuuFMu2VOUDWUsZGj4CEky7vsdhSlYKxeHvDx9oA&lib=MBT0RtRqQxoyFZd0nPZUuS_mAJA9d-Djn';
+
+// Fetch the data from the source
+fetch(dataUrl)
+  .then(response => response.json())
+  .then(listingsData => {
+    initializeApp(listingsData);
+  })
+  .catch(error => {
+    console.error('Something went wrong fetching from Google Sheets!', error);
+  });
+
+
+
+// Fetch the data from the source
+fetch(dataUrl)
+  .then(response => response.json())
+  .then(listingsData => {
+    initializeApp(listingsData);
+  })
+  .catch(error => {
+    console.error('Something went wrong fetching from Google Sheets!', error);
+  });
+
+// The rest of your initializeApp function remains below
+function initializeApp(listingsData) {
+  // ...
+}
 
 
 function initializeApp(listingsData) {
