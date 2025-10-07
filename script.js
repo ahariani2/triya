@@ -38,11 +38,6 @@ fetch(dataUrl)
     console.error('Something went wrong fetching from Google Sheets!', error);
   });
 
-// The rest of your initializeApp function remains below
-function initializeApp(listingsData) {
-  // ...
-}
-
 
 function initializeApp(listingsData) {
 
@@ -54,8 +49,9 @@ listingsData.forEach(listing => {
     listing.shortenedTitle = listing.title;
   }
           
-          listing.rankingOrder = listing.l52Sales ? parseInt(listing.l52Sales.replace('$', '').replace(/,/g, '')) : 0
-       
+      //    listing.rankingOrder = listing.l52Sales ? parseInt(listing.l52Sales.replace('$', '').replace(/,/g, '')) : 0
+                listing.rankingOrder = listing.l52Sales;
+
 });
         
         /** Constants **/
