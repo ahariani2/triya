@@ -27,18 +27,6 @@ fetch(dataUrl)
   });
 
 
-
-// Fetch the data from the source
-fetch(dataUrl)
-  .then(response => response.json())
-  .then(listingsData => {
-    initializeApp(listingsData);
-  })
-  .catch(error => {
-    console.error('Something went wrong fetching from Google Sheets!', error);
-  });
-
-
 function initializeApp(listingsData) {
 
 
