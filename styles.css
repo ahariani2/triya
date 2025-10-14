@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 #listings-container,
 #filter-bar {
-    font-family: 'Lora', sans-serif;
+    font-family: 'Lexend', sans-serif;
 }
 
 #listings-list {
