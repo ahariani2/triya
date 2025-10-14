@@ -3,9 +3,17 @@
 /* --- Main Container --- */
 .card-list-container {
   overflow-x: scroll;
+  cursor: grab; /* NEW: Indicates the area is draggable */
+  user-select: none; /* NEW: Prevents text highlighting when you drag */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+/* NEW: Changes the cursor to a "grabbing" hand while you're dragging */
+.card-list-container.active {
+    cursor: grabbing;
+}
+
 .card-list-container::-webkit-scrollbar {
   display: none;
 }
