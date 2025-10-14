@@ -55,12 +55,12 @@ const closeButton = document.querySelector('.close-button');
 
 
 function openLightbox(listing) {
-  // Populate the lightbox with product details
+  // Populate the lightbox with product details using the new structure
   lightboxDetailsContainer.innerHTML = `
     <div class="lightbox-image-container">
-      <img src="${listing.imageUrl}" alt="${listing.title}">
+      <img src="${listing.imageUrl}" alt="${listing.shortenedTitle || listing.title}">
     </div>
-    <div class="lightbox-text-container">
+    <div class="lightbox-text-content">
       <h3>${listing.title}</h3>
       <p>${listing.subtitle}</p>
       <div class="lightbox-buttons">
