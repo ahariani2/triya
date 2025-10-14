@@ -332,16 +332,37 @@
     }
 
 #lightbox-details-container {
-  display: flex;
-  flex-direction: column; /* Stack elements vertically by default (mobile) */
-  align-items: flex-start; /* Align to the left/top */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns for desktop */
+    gap: 25px; /* Space between image and text */
+    align-items: center;
+    text-align: left;
+    width: 100%;
 }
 
-.lightbox-image-container {
-  width: 100%; /* Full width on mobile */
-  display: flex;
-  justify-content: center; /* Center image horizontally */
-  align-items: center; /* Center image vertically */
+.lightbox-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Soften the image corners */
+}
+
+.lightbox-text-content h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    font-weight: 600; /* Bolder title */
+}
+
+.lightbox-text-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* This makes the lightbox stack nicely on mobile */
+@media (max-width: 768px) {
+    #lightbox-details-container {
+        grid-template-columns: 1fr; /* A single column on mobile */
+    }
 }
    
    
