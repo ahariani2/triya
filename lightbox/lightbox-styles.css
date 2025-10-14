@@ -17,7 +17,7 @@
 .lightbox-content {
     margin: 5% auto;
     width: 80%;
-    max-width: 900px; /* Add a max-width for very large screens */
+    max-width: 900px;
     background-color: #fff;
     padding: 25px;
     border-radius: 8px;
@@ -42,12 +42,17 @@
     width: 100%;
 }
 
+.lightbox-image-container {
+    width: 100%;
+}
+
 .lightbox-image-container img {
     width: 100%;
     height: auto;
     max-height: 450px;
-    object-fit: contain; /* This will scale the image down to fit */
+    object-fit: contain;
     display: block;
+    border-radius: 8px;
 }
 
 .lightbox-text-content h3 {
