@@ -3,12 +3,11 @@
 /* --- Main Container --- */
 .card-list-container {
   overflow-x: scroll;
-  /* Hides the ugly scrollbar */
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none;  /* For IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .card-list-container::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none;
 }
 
 /* --- The List of Cards --- */
@@ -17,20 +16,19 @@
   padding: 20px 0;
   margin: 0;
   list-style: none;
-  gap: 16px; /* Space between cards */
+  gap: 16px;
 }
 
 /* --- Individual Card Item --- */
 .card-list__item {
-  /* Desktop: 3.3 cards visible. 16px gap * 3 = 48px. 100% - 48px / 4 */
   flex: 0 0 calc(30% - 12px);
   background: #f9f9f9;
-  border-radius: 12px; /* Rounded rectangle card */
-  overflow: hidden; /* Clips the image corners */
+  border-radius: 12px;
+  overflow: hidden;
   transition: transform 0.2s ease-in-out;
 }
 .card-list__item:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /* --- Card Link & Image --- */
@@ -42,9 +40,9 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1; /* Makes the image a perfect square */
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 8px 8px 0 0; /* Rounded top corners for the image */
+  border-radius: 8px 8px 0 0;
 }
 
 /* --- Card Content --- */
@@ -61,7 +59,6 @@
   font-size: 0.9em;
   color: #666;
 }
-
 .card-list__title, .card-list__subtitle {
   font-family: 'Lexend', sans-serif;
 }
@@ -69,7 +66,6 @@
 /* --- Mobile View --- */
 @media (max-width: 768px) {
   .card-list__item {
-    /* Mobile: 1.5 cards visible */
     flex: 0 0 70%;
   }
 }
