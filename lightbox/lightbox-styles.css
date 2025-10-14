@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
    /** Item Lightbox **/
    
@@ -12,6 +13,7 @@
       height: 100%;
       overflow: auto; /* Enable scroll if needed */
       background-color: rgba(0, 0, 0, 0.5); /* Dark background with opacity */
+       font-family: 'Lexend', sans-serif;
     }
 
     .lightbox-content {
@@ -41,10 +43,22 @@
     width: 100%;
 }
 
+.lightbox-image-container {
+    /* Define the frame for your image */
+    max-height: 450px; /* Adjust this value to your liking */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px; /* The container should have the border-radius */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .lightbox-image-container img {
     width: 100%;
-    height: auto;
-    border-radius: 8px; /* Soften the image corners */
+    height: 100%;
+    /* This is the magic property that "crops" the image to fit */
+    object-fit: cover; 
 }
 
 .lightbox-text-content h3 {
