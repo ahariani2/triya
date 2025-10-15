@@ -2,20 +2,27 @@
 
 /* --- Main Container --- */
 .card-list-container {
-  overflow-x: scroll;
-  cursor: grab; /* NEW: Indicates the area is draggable */
-  user-select: none; /* NEW: Prevents text highlighting when you drag */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  overflow-x: scroll; /* This enables horizontal scrolling */
+  /* We've removed the cursor and scrollbar-hiding properties */
 }
 
-/* NEW: Changes the cursor to a "grabbing" hand while you're dragging */
-.card-list-container.active {
-    cursor: grabbing;
-}
-
+/* This works in browsers like Chrome, Safari, and Edge */
 .card-list-container::-webkit-scrollbar {
-  display: none;
+  height: 8px; /* Sets the thickness of the scrollbar */
+}
+
+.card-list-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* The "track" the scrollbar sits on */
+  border-radius: 10px;
+}
+
+.card-list-container::-webkit-scrollbar-thumb {
+  background: #ccc; /* The draggable part of the scrollbar */
+  border-radius: 10px;
+}
+
+.card-list-container::-webkit-scrollbar-thumb:hover {
+  background: #aaa; /* A darker color when you hover over it */
 }
 
 /* --- The List of Cards --- */
