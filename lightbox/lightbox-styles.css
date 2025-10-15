@@ -59,6 +59,7 @@
     margin-top: 0;
     font-size: 1.5em;
     font-weight: 600;
+    padding-bottom: 10px; /* Adds space below the title on all views */
 }
 
 .lightbox-text-content p {
@@ -89,6 +90,11 @@
 @media (max-width: 768px) {
     #lightbox-details-container {
         grid-template-columns: 1fr;
+    }
+
+    /* NEW: Add this rule to adjust the title on mobile */
+    .lightbox-text-content h3 {
+        font-size: 1.2em; /* Smaller font size for mobile */
     }
 }
 
