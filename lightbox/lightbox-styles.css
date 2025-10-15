@@ -91,3 +91,40 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Lightbox Buttons --- */
+.lightbox-buttons {
+    display: flex;
+    flex-direction: column; /* Stacks buttons vertically */
+    align-items: flex-start; /* Aligns them to the left */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.lightbox-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px; /* Pill shape */
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #fff; /* White text */
+    transition: transform 0.2s ease;
+}
+
+.lightbox-button:hover {
+    transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+/* Specific button colors */
+.etsy-button {
+    background-color: #F16521; /* Etsy Orange */
+}
+
+.amazon-button {
+    background-color: #FF9900; /* Amazon Gold */
+}
+
+.michaels-button {
+    background-color: #2E8B57; /* Michaels Green */
+}
